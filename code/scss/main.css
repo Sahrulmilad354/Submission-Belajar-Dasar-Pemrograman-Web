@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Macondo&display=swap");
+body {
+  padding-top: 2rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #0b5050;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px 0;
+  color: white;
+  letter-spacing: 3px;
+}
+
+nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .logo img {
+  width: 60px;
+  height: 60px;
+  margin: 0.3px 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .logo img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+nav .logo h4 {
+  font-family: "Lobster", cursive;
+}
+
+nav .logo h4:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Macondo", cursive;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+nav ul a:hover {
+  color: #0b5050;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.menu-toogle {
+  padding: 20px 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.menu-toogle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  left: -9px;
+  top: 12px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toogle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu-toogle span:nth-child(2) {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.menu-toogle span:nth-child(4) {
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked ~ span:nth-child(2) {
+  -webkit-transform: rotate(45deg) translate(-1px, -1px);
+          transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toogle input:checked ~ span:nth-child(4) {
+  -webkit-transform: rotate(-45deg) translate(-1px, 0);
+          transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toogle input:checked ~ span:nth-child(3) {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+main {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+main article h1 {
+  text-align: center;
+  font-family: "Macondo", cursive;
+  font-size: 2em;
+  color: #0b5050;
+}
+
+main article h1:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+main article p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+main aside {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "article figure figure" "article figure figure";
+}
+
+main aside article {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: article;
+  min-height: 600px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+main aside article b {
+  color: #087070;
+}
+
+main aside article strong {
+  color: #a1a30f;
+}
+
+main aside article h1 {
+  font-size: 2em;
+  text-align: center;
+  font-family: "Macondo", cursive;
+  color: #087070;
+}
+
+main aside article h1:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+main aside article p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+main aside article i {
+  font-size: 1.3em;
+}
+
+main aside article a {
+  display: inline-block;
+  color: #e5e923;
+  background-color: #087070;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  color: #e5e923;
+}
+
+main aside article a:hover {
+  color: #087070;
+  border: 1px solid #e5e923;
+  background-color: #e5e923;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+main aside figure {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+main aside figure img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+main .pendidikan {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5px;
+  justify-items: center;
+  background-image: url(../../img/background/01.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main .pendidikan img {
+  width: 15em;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  margin-left: 23px;
+}
+
+main .pendidikan img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+main .pendidikan h1 {
+  grid-column: 1/-1;
+  text-align: center;
+  font-family: "Macondo", cursive;
+  font-size: 2em;
+  color: #e5e923;
+}
+
+main .keahlian {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 5px;
+  justify-items: center;
+}
+
+main .keahlian h1 {
+  grid-column: 1/-1;
+  text-align: center;
+  font-family: "Macondo", cursive;
+  font-size: 2em;
+  color: #087070;
+}
+
+main .keahlian .kompetensi img {
+  width: 5em;
+  border-radius: 25px;
+  margin-left: 68px;
+}
+
+main .keahlian .kompetensi img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+main .keahlian .kompetensi .tulisan {
+  margin-left: 20px;
+}
+
+main .keahlian .kompetensi .tulisan h3 {
+  text-align: center;
+}
+
+main .keahlian .kompetensi .tulisan p {
+  text-align: center;
+}
+
+main .sertifikasi {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+  justify-items: center;
+  background-image: url(../../img/background/02.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main .sertifikasi img {
+  width: 22em;
+  margin-bottom: 50px;
+  margin-left: 43px;
+}
+
+main .sertifikasi img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+main .sertifikasi h1 {
+  grid-column: 1/-1;
+  text-align: center;
+  font-family: "Macondo", cursive;
+  font-size: 2em;
+  color: #087070;
+}
+
+main .organisasi {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5px;
+  justify-items: center;
+}
+
+main .organisasi img {
+  width: 15em;
+  margin-bottom: 50px;
+  margin-left: 43px;
+}
+
+main .organisasi img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+main .organisasi h1 {
+  grid-column: 1/-1;
+  text-align: center;
+  font-family: "Macondo", cursive;
+  font-size: 2em;
+  color: #087070;
+}
+
+footer {
+  background-color: #0b5050;
+  padding-left: 50px;
+}
+
+footer .container h2 {
+  color: white;
+}
+
+footer .container h3 {
+  text-align: center;
+  color: white;
+  padding: 2em;
+}
+
+footer .container p {
+  color: white;
+}
+
+footer .container i {
+  font-size: 1.3em;
+}
+
+footer .container a {
+  display: inline-block;
+  color: #0b5050;
+  background-color: white;
+  border-radius: 5em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: "Sriracha", cursive;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+footer .container a:hover {
+  color: #087070;
+  border: 1px solid #e5e923;
+  background-color: #e5e923;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* Responsiv Ukuran Tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+/* Responsiv Ukuran Mobile */
+@media screen and (max-width: 576px) {
+  .menu-toogle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #0b5050;
+    z-index: -1;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    opacity: 0;
+  }
+  nav ul .slide {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  aside {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "figure" "article";
+  }
+  aside article {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: article;
+    min-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    text-align: center;
+  }
+  aside article b {
+    color: #087070;
+  }
+  aside article strong {
+    color: #a1a30f;
+  }
+  aside article h1 {
+    font-size: 2em;
+    text-align: center;
+    font-family: "Macondo", cursive;
+    color: #087070;
+  }
+  aside article h1:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  aside article p {
+    font-size: 1.2em;
+    text-align: justify;
+  }
+  aside article i {
+    font-size: 1.3em;
+  }
+  aside article a {
+    display: inline-block;
+    color: #e5e923;
+    background-color: #087070;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-family: "Sriracha", cursive;
+    border: 1px solid transparent;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    color: #e5e923;
+  }
+  aside article a:hover {
+    color: #087070;
+    border: 1px solid #e5e923;
+    background-color: #e5e923;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  aside figure {
+    min-height: 100px;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  aside figure img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  main .kompetensi {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+    justify-items: center;
+    background-image: url(../../img/background/02.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main .kompetensi img {
+    width: 3em;
+    border-radius: 25px;
+    margin-left: 68px;
+  }
+  main .sertifikasi {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+    justify-items: center;
+    background-image: url(../../img/background/02.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-right: 5px;
+  }
+  main .sertifikasi img {
+    width: 18em;
+    margin-bottom: 50px;
+  }
+  main .sertifikasi img:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+}
+/*# sourceMappingURL=main.css.map */
